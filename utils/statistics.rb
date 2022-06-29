@@ -1,6 +1,6 @@
 module Utils
 
-	# @brief Statistics class utility for the Ruby language
+	# @brief  Statistics class utility for the Ruby language
 	# @author Kqpa
 	# @methods
 	#	sum([Array]),
@@ -78,19 +78,19 @@ module Utils
 
 		# @brief Calculates the mode of the given array
 		# @param nums [Array] The array of numbers
-		# @return [Float | Int] The mode of the array
+		# @return Array[(Float | Int)] Array of mode(s) of the array
 
 		def mode(nums)
 			check_empty(nums)
-			mode = 0
+			modes = []
 			count = 0
 			nums.each do |num|
-				if nums.count(num) > count
-					mode = num
+				if nums.count(num) >= count && !modes.include?(num)
+					modes << num
 					count = nums.count(num)
 				end
 			end
-			return mode
+			return modes
 		end
 
 		# @brief Calculates the mean (average) of the given array
@@ -106,7 +106,7 @@ module Utils
 		# @param nums [Array] The array of numbers
 		# @return [Raise] If the array is empty, raise an exception
 		private def check_empty(arr)
-			return raise ArgumentError, "Array is empty" if arr.empty?
+			return raise ArgumentError, "Array cannot be empty" if arr.empty?
 		end
 
 	end
