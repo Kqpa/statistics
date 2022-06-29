@@ -1,8 +1,8 @@
 module Utils
 
-	# @brief	Statistics class utility for the Ruby language
-	# @author	Kqpa
-	# @methods:	
+	# @brief Statistics class utility for the Ruby language
+	# @author Kqpa
+	# @methods
 	#	sum([Array]),
 	#	max([Array]),
 	#	min([Array]),
