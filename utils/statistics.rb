@@ -80,18 +80,18 @@ module Utils
 		# @param nums [Array] The array of numbers
 		# @return Array[(Float | Int)] Array of mode(s) of the array
 
-		def mode(nums)
-			check_empty(nums)
-			modes = []
-			count = 0
-			nums.each do |num|
-				if nums.count(num) >= count && !modes.include?(num)
-					modes << num
-					count = nums.count(num)
-				end
-			end
-			return modes
-		end
+		# def mode(nums)
+		# 	check_empty(nums)
+		# 	modes = []
+		# 	count = 0
+		# 	nums.each do |num|
+		# 		if nums.count(num) >= count && !modes.include?(num)
+		# 			modes << num
+		# 			count = nums.count(num)
+		# 		end
+		# 	end
+		# 	return modes
+		# end
 
 		# @brief Calculates the mean (average) of the given array
 		# @param nums [Array] The array of numbers

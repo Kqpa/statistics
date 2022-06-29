@@ -9,7 +9,7 @@ Statistics is a Ruby library that provides statistical tools, such as calculatin
 
 ```sh
 git clone 'https://github.com/Kqpa/statistics.git'
-mv './statistics/utils/statistics.rb' '~/YourProject/lib'
+mv ./statistics/utils/statistics.rb ~/YourProject/lib
 ```
 
 # Features
