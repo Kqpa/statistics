@@ -8,7 +8,7 @@ module Utils
 	#           range([Array]),
 	#           median([Array]),
 	#           mode([Array]),
-	#           mean([Array]),
+	#           mean([Array])
 	#			[Private] check_empty([Array])
 	
 	class Statistics
