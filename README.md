@@ -27,47 +27,47 @@ Then, you can use the following methods:
 
 ```rb
 puts "Sum: #{stats.sum([1, 2, 3, 4, 5])}"
-# => Sum: 15
+# [out]: Sum: 15
 ```
 
 * **Calculate the maximum number in a set of numbers**
 
 ```rb
 puts "Max: #{stats.max([1, 2, 3, 4, 5])}"
-# => Max: 5
+# [out]: Max: 5
 ```
 
 * **Calculate the minimum number in a set of numbers**
 
 ```rb
 puts "Min: #{stats.min([1, 2, 3, 4, 5])}"
-# => Min: 1
+# [out]: Min: 1
 ```
 
 * **Calculate the range of a set of numbers**
 
 ```rb
 puts "Range: #{stats.range([1, 2, 3, 4, 5])}"
-# => Range: 4
+# [out]: Range: 4
 ```
 
 * **Calculate the median of a set of numbers**
 
 ```rb
 puts "Median: #{stats.median([1, 2, 3, 4, 5])}"
-# => Median: 3
+# [out]: Median: 3
 ```
 
 * **Calculate the mean of a set of numbers**
 
 ```rb
 puts "Mean: #{stats.mean([1, 2, 3, 4, 5])}"
-# => Mean: 3
+# [out]: Mean: 3
 ```
 
 * **Calculates the mode of a set of numbers**
 
 ```rb
-puts "Mode: #{stats.mode([1, 2, 3, 3, 3, 2, 2])}"
-
+puts "Mode: #{stats.mode([1, 1, 1, 2, 2, 3, 4, 5, 5, 5])}"
+# [out]: Mode: [1, 5]
 ```

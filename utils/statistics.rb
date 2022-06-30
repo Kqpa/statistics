@@ -18,7 +18,7 @@ module Utils
 		# @param nums [Array] The array of numbers
 		# @return [Float | Int] The sum of all the numbers in the array
 
-		def sum(nums)
+		public def sum(nums)
 			check_empty(nums)
 			sum = 0
 			nums.each do |num|
@@ -31,7 +31,7 @@ module Utils
 		# @param nums [Array] The array of numbers
 		# @return [Float | Int] The maximum value in the array
 
-		def max(nums)
+		public def max(nums)
 			check_empty(nums)
 			max = nums[0]
 			nums.each do |num|
@@ -44,7 +44,7 @@ module Utils
 		# @param nums [Array] The array of numbers
 		# @return [Float | Int] The minimum value in the array
 
-		def min(nums)
+		public def min(nums)
 			check_empty(nums)
 			min = nums[0]
 			nums.each do |num|
@@ -57,7 +57,7 @@ module Utils
 		# @param nums [Array] The array of numbers
 		# @return [Float | Int] The range of the array
 
-		def range(nums)
+		public def range(nums)
 			check_empty(nums)
 			return nums.max - nums.min
 		end
@@ -66,7 +66,7 @@ module Utils
 		# @param nums [Array] The array of numbers
 		# @return [Float | Int] The median of the array
 
-		def median(nums)
+		public def median(nums)
 			check_empty(nums)
 			nums.sort!
 			if nums.length.even?
@@ -80,24 +80,29 @@ module Utils
 		# @param nums [Array] The array of numbers
 		# @return Array[(Float | Int)] Array of mode(s) of the array
 
-		# def mode(nums)
-		# 	check_empty(nums)
-		# 	modes = []
-		# 	count = 0
-		# 	nums.each do |num|
-		# 		if nums.count(num) >= count && !modes.include?(num)
-		# 			modes << num
-		# 			count = nums.count(num)
-		# 		end
-		# 	end
-		# 	return modes
-		# end
+		public def mode(nums)
+			counts = Hash.new(0)
+			modes = []
+			nums.each do |num|
+				if counts.has_key?(num)
+					counts[num] += 1
+				else
+					counts[num] = 1
+				end
+			end
+			counts.keys.each do |num|
+				if counts[num] == counts.values.max
+					modes.push(num)
+				end
+			end
+			return modes
+		end
 
 		# @brief Calculates the mean (average) of the given array
 		# @param nums [Array] The array of numbers
 		# @return [Float | Int] The mode of the array
 
-		def mean(nums)
+		public def mean(nums)
 			check_empty(nums)
 			return nums.sum / nums.length
 		end
