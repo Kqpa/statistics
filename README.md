@@ -21,7 +21,7 @@ require "./lib/utils/statistics"
 stats = Utils::Statistics.new
 ```
 
-Then, you can use the following methods:
+After that, you can use the following methods listed below. For an example demonstrating how to use the library, refer to [`examples.rb`](./examples.rb).
 
 * **Calculate the sum of a set of numbers**
 

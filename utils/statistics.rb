@@ -3,19 +3,19 @@ module Utils
 	# @brief  Statistics class utility for the Ruby language
 	# @author Kqpa
 	# @methods
-	#	sum([Array]),
-	#	max([Array]),
-	#	min([Array]),
-	#	range([Array]),
-	#	median([Array]),
-	#	mode([Array]),
-	#	mean([Array]),
+	#	[Public]  sum([Array]),
+	#	[Public]  max([Array]),
+	#	[Public]  min([Array]),
+	#	[Public]  range([Array]),
+	#	[Public]  median([Array]),
+	#	[Public]  mode([Array]),
+	#	[Public]  mean([Array]),
 	#	[Private] check_empty([Array])
 	
 	class Statistics
 		
 		# @brief Calculates the sum of all the numbers in the given array
-		# @param nums [Array] The array of numbers
+		# @param nums [Array(Float | Int)] The array of numbers
 		# @return [Float | Int] The sum of all the numbers in the array
 
 		public def sum(nums)
@@ -28,7 +28,7 @@ module Utils
 		end
 
 		# @brief Calculates the maximum value of the given array
-		# @param nums [Array] The array of numbers
+		# @param nums [Array(Float | Int)] The array of numbers
 		# @return [Float | Int] The maximum value in the array
 
 		public def max(nums)
@@ -41,7 +41,7 @@ module Utils
 		end
 
 		# @brief Calculates the minimum value of the given array
-		# @param nums [Array] The array of numbers
+		# @param nums [Array(Float | Int)] The array of numbers
 		# @return [Float | Int] The minimum value in the array
 
 		public def min(nums)
@@ -54,7 +54,7 @@ module Utils
 		end
 
 		# @brief Calculates the range of the given array
-		# @param nums [Array] The array of numbers
+		# @param nums [Array(Float | Int)] The array of numbers
 		# @return [Float | Int] The range of the array
 
 		public def range(nums)
@@ -63,7 +63,7 @@ module Utils
 		end
 
 		# @brief Calculates the median of the given array
-		# @param nums [Array] The array of numbers
+		# @param nums [Array(Float | Int)] The array of numbers
 		# @return [Float | Int] The median of the array
 
 		public def median(nums)
@@ -77,7 +77,7 @@ module Utils
 		end
 
 		# @brief Calculates the mode of the given array
-		# @param nums [Array] The array of numbers
+		# @param nums [Array(Float | Int)] The array of numbers
 		# @return Array[(Float | Int)] Array of mode(s) of the array
 
 		public def mode(nums)
@@ -99,7 +99,7 @@ module Utils
 		end
 
 		# @brief Calculates the mean (average) of the given array
-		# @param nums [Array] The array of numbers
+		# @param nums [Array(Float | Int)] The array of numbers
 		# @return [Float | Int] The mode of the array
 
 		public def mean(nums)
@@ -108,7 +108,7 @@ module Utils
 		end
  
 		# @brief Checks if the given array is empty
-		# @param nums [Array] The array of numbers
+		# @param nums [Array(Float | Int)] The array of numbers
 		# @return [Raise] If the array is empty, raise an exception
 		private def check_empty(arr)
 			return raise ArgumentError, "Array cannot be empty" if arr.empty?
