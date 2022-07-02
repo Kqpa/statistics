@@ -110,6 +110,7 @@ module Utils
 		# @brief Checks if the given array is empty
 		# @param nums [Array(Float | Int)] The array of numbers
 		# @return [Raise] If the array is empty, raise an exception
+
 		private def check_empty(arr)
 			return raise ArgumentError, "Array cannot be empty" if arr.empty?
 		end
